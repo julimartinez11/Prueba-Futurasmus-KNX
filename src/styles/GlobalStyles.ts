@@ -6,18 +6,23 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f9;
-    color: #333;
+    background: #f1f4f9;
+    color: #222;
   }
 
-  h1, h3 {
-    margin: 0;
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #1a1a1a;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
   }
 
-  button {
-    cursor: pointer;
+  p {
+    margin: 0.25rem 0;
   }
 `;

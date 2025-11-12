@@ -5,6 +5,8 @@ import { Loader } from "./components/Loader";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import ErrorMessage from "./components/ErrorMessage";
 import styled from "styled-components";
+import logo from "./assets/futuLogo.png";
+
 
 const Container = styled.div`
   max-width: 1100px;
@@ -16,27 +18,51 @@ const Container = styled.div`
 `;
 
 const LoadMoreButton = styled.button`
-  background: #0077ff;
-  color: white;
+  background: linear-gradient(135deg, #0077ff, #005fcc);
+  color: #fff;
   border: none;
-  padding: 0.9rem 1.8rem;
-  border-radius: 8px;
+  padding: 1rem 2rem;
+  border-radius: 12px;
   font-size: 1rem;
-  margin: 2rem auto 1rem auto;
+  margin: 2rem auto;
   display: block;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    background: #005fd1;
     transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 119, 255, 0.4);
   }
 
   &:disabled {
-    opacity: 0.6;
+    opacity: 0.7;
     cursor: not-allowed;
   }
 `;
+
+const Header = styled.header`
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin: 0;
+  }
+    
+  p {
+    color: #6b7280;
+    font-size: 0.95rem;
+  }
+
+`;
+
 
 
 function App() {
@@ -46,7 +72,12 @@ function App() {
     <>
       <GlobalStyles />
       <Container>
-        <h1>Random User App</h1>
+        <Header>
+          <img src={logo} alt="Futurasmus Logo" />
+          <h1>App Futurasmus React</h1>
+          <p>Prueba técnica - Programador FullStack</p>
+        </Header>
+
         <SearchBar value={query} onChange={setQuery} />
 
         {loading && <Loader />}
