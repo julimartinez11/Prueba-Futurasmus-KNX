@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# Prueba técnica Futurasmus KNX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🧩 Descripción del proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este proyecto ha sido desarrollado como parte del proceso de selección para **Futurasmus KNX TEST Lab S.L.**, siguiendo la opción del **React Challenge** propuesta en la prueba técnica.
 
-## React Compiler
+La aplicación se conecta a la API pública [RandomUser.me](https://randomuser.me) y permite navegar, filtrar y cargar nuevos usuarios a través de una interfaz moderna, limpia y completamente responsive.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El objetivo principal es demostrar una forma de trabajo organizada, modular, sencilla de mantener y orientada a buenas prácticas.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Características principales
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ✔️ Obtención de usuarios desde la API RandomUser  
+- 🔍 Filtrado en tiempo real por nombre, email o país  
+- 📱 Diseño moderno y totalmente responsive  
+- ⏳ Estados visuales de carga y error  
+- 🔄 Paginación mediante botón “Cargar más”  
+- 🧱 Código modular con componentes reutilizables  
+- 🎨 Estilos profesionales con **styled-components**  
+- 🧠 Lógica centralizada en un custom hook (`useUsers`)  
+- 📦 Uso de TypeScript para mayor robustez  
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧰 Tecnologías utilizadas
+
+| Categoría | Herramienta |
+|----------|--------------|
+| Framework | React con Vite |
+| Lenguaje | TypeScript |
+| Estilos | styled-components |
+| Llamadas API | Axios |
+| Estado | React Hooks |
+| Control de versiones | Git + GitHub |
+
+---
+
+## ⚙️ Instalación y ejecución
+
+1️⃣ Clonar el repositorio:
+
+```bash
+git clone https://github.com/julimartinez11/Prueba-futurasmus-KNX.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2️⃣ Instalar dependencias:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+3️⃣ Ejecutar en entorno de desarrollo:
+
+```bash
+npm run dev
+```
+
+4️⃣ Acceder desde el navegador:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+👤 Autor
+
+Julián Martínez Tévar
+
+Desarrollador Full Stack
+
+GitHub: https://github.com/julimartinez11 
+
+Gmail : julianmt2001@gmail.com
