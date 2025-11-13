@@ -48,6 +48,7 @@ const Header = styled.header`
     width: 80px;
     height: 80px;
     margin-bottom: 0.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
   }
 
   h1 {
